@@ -12,6 +12,7 @@ import { content } from "./mocks";
 import { notitapEditorClass } from './proseClassString'
 
 import "./styles/tiptap.scss";
+import MenuBar from "./collab-tiptap/MenuBar";
 
 export const Tiptap = () => {
   const logContent = useCallback(
@@ -92,12 +93,12 @@ export const Tiptap = () => {
             Add table
           </button>
         </span>
-
+        <MenuBar editor={editor} />
         <EditorContent className="w-full flex justify-center" editor={editor} />
 
-        <CustomBubbleMenu editor={editor} />
+        {/* <CustomBubbleMenu editor={editor} />
 
-        <LinkBubbleMenu editor={editor} />
+        <LinkBubbleMenu editor={editor} /> */}
       </section>
     )
   );
