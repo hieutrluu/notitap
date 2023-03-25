@@ -1,5 +1,5 @@
-import { Tiptap } from "./tiptap";
-
+// import { Tiptap } from "./tiptap";
+import Mention from "./components/community-mention";
 import "./App.css";
 
 function App() {
@@ -39,7 +39,8 @@ function App() {
         </p>
       </header>
       <main className="flex justify-start w-full">
-        <Tiptap />
+        {/* <Tiptap /> */}
+        <Mention />
       </main>
     </div>
   );
