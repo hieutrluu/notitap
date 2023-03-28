@@ -5,12 +5,12 @@ import { debounce } from 'lodash';
 import { useCallback, useState } from "react";
 import "tippy.js/animations/shift-toward-subtle.css";
 // import applyDevTools from "prosemirror-dev-tools";
-
+// import { Bold, Italic, Code } from "@tiptap/extension";
 import { getExtensions } from "./extensions";
 import { CustomBubbleMenu, LinkBubbleMenu } from "./menus";
 import { content } from "./mocks";
 import { notitapEditorClass } from './proseClassString'
-
+import { EditorMenuBar } from "../components/EditorMenuBar";
 import "./styles/tiptap.scss";
 
 export const Tiptap = () => {
@@ -47,9 +47,10 @@ export const Tiptap = () => {
       width: "400",
       height: "400",
     });
-
+  
   const editor = useEditor({
-    extensions: getExtensions({ openLinkModal }),
+    extensions: getExtensions({ openLinkModal}),
+    // extensions: getExtensions({ openLinkModal, Bold, Italic, Code }),
     content,
     editorProps: {
       attributes: {
@@ -65,10 +66,11 @@ export const Tiptap = () => {
 
   const addTable = () => editor?.commands.insertTable({ rows: 3, cols: 3, withHeaderRow: true })
 
-
   return (
     editor && (
       <section className="flex flex-col gap-2 w-full justify-center">
+        <EditorMenuBar editor={editor} />
+        {/* ... rest of the code */}
         <span className="flex gap-2">
           <button
             className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -101,4 +103,11 @@ export const Tiptap = () => {
       </section>
     )
   );
+  // return (
+  //   editor && (
+  //     <section className="flex flex-col gap-2 w-full justify-center">
+  
+  //     </section>
+  //   )
+  // );
 };

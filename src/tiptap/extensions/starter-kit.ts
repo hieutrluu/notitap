@@ -24,6 +24,7 @@ import { Paragraph } from "./paragraph";
 import { SuperchargedTableExtensions } from "./supercharged-table";
 import { ResizableMedia } from "./resizableMedia";
 import { TrailingNode } from "./trailingNode";
+import Code from '@tiptap/extension-code';
 
 export interface PlaceholderOptions {
   emptyEditorClass: string;
@@ -110,7 +111,6 @@ export const Placeholder = Extension.create<PlaceholderOptions>({
 interface GetExtensionsProps {
   openLinkModal: () => void;
 }
-
 export const getExtensions = ({
   openLinkModal,
 }: GetExtensionsProps): AnyExtension[] => {
@@ -150,7 +150,7 @@ export const getExtensions = ({
       levels: [1, 2, 3],
     }),
     TrailingNode,
-
+    Code,
     // Table
     ...SuperchargedTableExtensions,
 

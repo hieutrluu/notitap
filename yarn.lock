@@ -620,6 +620,11 @@
   dependencies:
     prosemirror-state "1.4.1"
 
+"@tiptap/extension-code@^2.0.0-beta.220":
+  version "2.0.0-beta.220"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-code/-/extension-code-2.0.0-beta.220.tgz#3543afeda2b0b240682a36eeb401b00a3da56ab6"
+  integrity sha512-JKKDZoceagqVXeC1XF/gOkKhLtsbYJYV+MRDorLnQVz4tXcg/SMs5Ez7OM9MxSSior8fIbUFMNsj1/UNlG+tFw==
+
 "@tiptap/extension-code@^2.0.0-beta.28":
   version "2.0.0-beta.28"
   resolved "https://registry.npmjs.org/@tiptap/extension-code/-/extension-code-2.0.0-beta.28.tgz"
