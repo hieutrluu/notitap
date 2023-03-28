@@ -1,4 +1,5 @@
-import { Tiptap } from "./tiptap";
+// import { Tiptap } from "./tiptap";
+import RenderReact from "./tiptap-render-react";
 
 import "./App.css";
 
@@ -39,7 +40,8 @@ function App() {
         </p>
       </header>
       <main className="flex justify-start w-full">
-        <Tiptap />
+        {/* <Tiptap /> */}
+        <RenderReact />
       </main>
     </div>
   );
